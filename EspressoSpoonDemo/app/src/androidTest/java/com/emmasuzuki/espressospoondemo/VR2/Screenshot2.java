@@ -1,7 +1,7 @@
 package com.emmasuzuki.espressospoondemo.VR2;
 
 /**
- * Created by varun gaur on 2/25/2017.
+ * concept taken from  https://github.com/square/spoon/tree/master/spoon-client/src/main/java/com/squareup/spoon
  */
 
 import android.app.Activity;
