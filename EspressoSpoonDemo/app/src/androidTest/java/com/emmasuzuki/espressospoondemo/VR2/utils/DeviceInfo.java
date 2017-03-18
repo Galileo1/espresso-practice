@@ -58,27 +58,27 @@ public class DeviceInfo {
     }
 
 
-    public static boolean isEmulator() {
-        return Build.FINGERPRINT.startsWith("generic")
-                || Build.FINGERPRINT.startsWith("unknown")
-                || Build.MODEL.contains("google_sdk")
-                || Build.MODEL.contains("Emulator")
-                || Build.MODEL.contains("Android SDK built for x86")
-                || Build.MANUFACTURER.contains("Genymotion")
-                || (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
-                || "google_sdk".equals(Build.PRODUCT);
-    }
+    // public static boolean isEmulator() {
+    //     return Build.FINGERPRINT.startsWith("generic")
+    //             || Build.FINGERPRINT.startsWith("unknown")
+    //             || Build.MODEL.contains("google_sdk")
+    //             || Build.MODEL.contains("Emulator")
+    //             || Build.MODEL.contains("Android SDK built for x86")
+    //             || Build.MANUFACTURER.contains("Genymotion")
+    //             || (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
+    //             || "google_sdk".equals(Build.PRODUCT);
+    // }
 
-    public static String currentVersion(){
-        double release = Double.parseDouble(android.os.Build.VERSION.RELEASE);
-        String codeName="Unsupported";//below Jelly bean OR above nougat
-        if(release >= 4.1 && release<4.4)codeName="Jelly Bean";
-        else if(release<5)codeName="Kit Kat";
-        else if(release<6)codeName="Lollipop";
-        else if(release<7)codeName="Marshmallow";
-        else if(release<8)codeName="Nougat";
-        return codeName+" v"+release+", API Level: "+Build.VERSION.SDK_INT;
-    }
+    // public static String currentVersion(){
+    //     double release = Double.parseDouble(android.os.Build.VERSION.RELEASE);
+    //     String codeName="Unsupported";//below Jelly bean OR above nougat
+    //     if(release >= 4.1 && release<4.4)codeName="Jelly Bean";
+    //     else if(release<5)codeName="Kit Kat";
+    //     else if(release<6)codeName="Lollipop";
+    //     else if(release<7)codeName="Marshmallow";
+    //     else if(release<8)codeName="Nougat";
+    //     return codeName+" v"+release+", API Level: "+Build.VERSION.SDK_INT;
+    // }
 
     public static String getSdkHome(){
         return System.getenv("ANDROID_HOME");

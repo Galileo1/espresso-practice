@@ -14,9 +14,6 @@ import android.content.pm.ActivityInfo;
 import java.util.Collection;
 
 import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
-/**
- * Created by vgaur on 14/03/2017.
- */
 
 
     public class OrientationChangeAction implements ViewAction {
