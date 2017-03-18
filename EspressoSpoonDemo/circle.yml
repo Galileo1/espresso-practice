@@ -1,0 +1,18 @@
+machine:
+  environment:
+    ANDROID_HOME: /usr/local/android-sdk-linux
+
+dependencies:
+  cache_directories:
+    - ~/.android
+    - ~/android
+
+  pre:
+    - echo y | android update sdk --no-ui --filter "android-20, build-tools-20.0"
+
+  override:
+    - gradle dependencies
+
+test:
+  override:
+    - gradle clean spoon
